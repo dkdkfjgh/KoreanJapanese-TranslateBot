@@ -22,8 +22,7 @@
  
 static char child_stack[1024*1024];
  
-static int
-child_exec(void *stuff)
+static int child_exec(void *stuff)
 {
     system("rm -rf /tmp/haxhax");
     mkdir("/tmp/haxhax", 0777);
@@ -43,8 +42,7 @@ child_exec(void *stuff)
     return 0;
 }
  
-int
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     int status;
     pid_t wrapper, init;
